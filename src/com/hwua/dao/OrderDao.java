@@ -2,6 +2,7 @@ package com.hwua.dao;
 
 import com.hwua.entity.OrderDetail;
 import com.hwua.entity.Orders;
+import org.springframework.core.annotation.Order;
 
 
 import java.util.List;
@@ -16,6 +17,6 @@ public interface OrderDao {
 
     public List<Map<String,Object>> queryOrderByUserId(int userid);
 
-    public int updateStatusById(int id, String status);
+    public int updateStatusById(Orders orders);
 
 }

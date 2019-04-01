@@ -4,12 +4,27 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hwua.dao.UserDao">
 
-    <select id="queryCarByUserAndGood" resultType="user" parameterType="string">
-        select * from user where user_username=#{user_username}
+    <select id="queryCarByUserAndGood" parameterType="int" resultType="goods">
+        select * from car where userid = #{good_id}  and goodid = #{user_id}
     </select>
 
-    <update id="updatePassword" parameterType="String">
-        update user set password= #{user_password} where username = #{user_username}
+    <update id="updatePassword" parameterType="car">
+        update car set counts=counts+? where userid = #{user_id} and goodid = #{good_id}
     </update>
 
+    <insert id="addCar" parameterType="car">
+        insert into car values(null,#{user_id},#{good_id},#{car_counts})
+    </insert>
+
+    <select id="queryCarByUserId" resultType="car">
+        select * from car where userid = #{user_id}
+    </select>
+
+    <delete id="delCarById" parameterType="int">
+        delete from car where id = #{car_id}
+    </delete>
+
+    <update id="updateCount" parameterType="int">
+        update car set counts=#{car_counts} where id = #{car_id}
+    </update>
 </mapper>

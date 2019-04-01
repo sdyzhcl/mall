@@ -4,24 +4,12 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hwua.dao.UserDao">
 
-    <select id="selectUserByUsername" resultType="user" parameterType="string">
-        select * from user where user_username=#{user_username}
+    <select id="queryGoodById" resultType="user" parameterType="string">
+        select * from good where user_username=#{user_userid}
     </select>
 
-    <select id="addUser" resultType="user" parameterType="user">
-        insert into user value (null ,#{user_username},#{user_password})
+    <select id="queryGoodPage" resultType="goods">
+        select * from good where name like CONCAT('%',#{user_userid},'%') limit 8
     </select>
-
-    <select id="queryUserBynamepass" resultType="user" parameterType="string">
-        select * from user where username = #{user_username} and password = #{user_password}
-    </select>
-
-    <select id="queryUser" resultType="user" parameterType="string">
-        select * from user where username like CONCAT('%',#{user_username},'%')
-    </select>
-
-    <update id="updatePassword" parameterType="String">
-        update user set password= #{user_password} where username = #{user_username}
-    </update>
 
 </mapper>
