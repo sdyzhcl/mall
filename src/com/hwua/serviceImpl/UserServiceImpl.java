@@ -22,4 +22,9 @@ public class UserServiceImpl  implements UserService {
             return "密码错误";
         }
     }
+
+    @Override
+    public int insertUser(User user) {
+        return 0;
+    }
 }

@@ -59,11 +59,22 @@
         <div class="xian center"></div>
       </div>
       <div class="regist_main center">
-        <div class="username">用&nbsp;&nbsp;户&nbsp;&nbsp;名:&nbsp;&nbsp;<input class="shurukuang" type="text" id="username" placeholder="请输入你的用户名"/></div>
-        <div class="username">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:&nbsp;&nbsp;<input class="shurukuang" type="password" id="password" placeholder="请输入你的密码"/></div>
-        <div class="username">确认密码:&nbsp;&nbsp;<input class="shurukuang" type="password" id="password2" placeholder="请确认你的密码"/><span>两次密码要输入一致哦</span></div>
-        <div class="username">手&nbsp;&nbsp;机&nbsp;&nbsp;号:&nbsp;&nbsp;<input class="shurukuang" type="text" id="phone" placeholder="请填写手机号"/></div>
-        <div class="username">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱:&nbsp;&nbsp;<input class="shurukuang" type="text" id="email"></div><br>
+        <div class="username">用&nbsp;&nbsp;户&nbsp;&nbsp;名:&nbsp;&nbsp;
+          <input class="shurukuang" type="text" id="username" placeholder="请输入你的用户名"/>
+        </div>
+        <div class="username">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:&nbsp;&nbsp;
+          <input class="shurukuang" type="password" id="password" placeholder="请输入你的密码"/>
+        </div>
+        <div class="username">确认密码:&nbsp;&nbsp;
+          <input class="shurukuang" type="password" id="password2" placeholder="请确认你的密码"/>
+          <span>两次密码要输入一致哦</span>
+        </div>
+        <div class="username">手&nbsp;&nbsp;机&nbsp;&nbsp;号:&nbsp;&nbsp;
+          <input class="shurukuang" type="text" id="phone" placeholder="请填写手机号"/>
+        </div>
+        <div class="username">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱:&nbsp;&nbsp;
+          <input class="shurukuang" type="text" id="email">
+        </div><br>
       </div>
       <div class="regist_submit">
         <input class="submit" type="button" name="submit" value="立即注册" onclick="regist()"><br>
