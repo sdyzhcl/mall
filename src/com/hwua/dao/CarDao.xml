@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hwua.dao.UserDao">
+
+    <select id="queryCarByUserAndGood" resultType="user" parameterType="string">
+        select * from user where user_username=#{user_username}
+    </select>
+
+    <update id="updatePassword" parameterType="String">
+        update user set password= #{user_password} where username = #{user_username}
+    </update>
+
+</mapper>
